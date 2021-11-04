@@ -20,6 +20,7 @@ export class AjoutUserComponent implements OnInit {
   listUsers: any;
   //addForm: any;
   userId: string = '';
+  lisut: any;
 
   constructor(
     private servi: UserService,
@@ -35,7 +36,7 @@ export class AjoutUserComponent implements OnInit {
     //recuperer la liste apprenant
     this.servi.listUser().subscribe(data =>{
       this.listUsers = data;
-      console.log(data);
+      //console.log(data);
     });
 
     this.activatedRoute.params.subscribe(data => {
@@ -49,6 +50,11 @@ export class AjoutUserComponent implements OnInit {
         //console.log("erreur erreur");
       })
     }
+  }
+  utililiste(ut: NgForm){
+    this.servi.listformateur(ut.value.perso).subscribe(dataut => {
+      this.lisut = dataut;
+    })
   }
 
 

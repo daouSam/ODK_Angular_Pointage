@@ -13,13 +13,17 @@ export class UserService {
   listUser(){
     return this.http.get(this.apiUrl+'/users/all');
   }
-  ajout(donnee: any){
-    return this.http.post(this.apiUrl+'/users/save', donnee);
+  ajout(kelly: any){
+    return this.http.post(this.apiUrl+'/users/save', kelly);
+    //console.log(kelly);
   }
   modifierUser(){
     return this.http.get(this.apiUrl+'/save');
   }
   suppUser(id: any){
     return this.http.delete(this.apiUrl+'/user/delete/'+id);
+  }
+  listformateur(profil: any){
+    return this.http.get(this.apiUrl+'/users/'+profil);
   }
 }
