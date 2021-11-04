@@ -1,0 +1,90 @@
+<mat-tab-group>
+  <mat-tab label="Ajouter un utilisateur">
+    <p>hello world !</p>
+  </mat-tab>
+
+  <mat-tab label="Liste des utilisateur">
+    <div class="titre">
+      <h2>La liste des {{listUsers.length}} apprenants de la première promotion Orange Digitale Kalanso Mali</h2>
+      <span class="example-spacer"></span>
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-backdrop="static" data-keyboard=false>Ajouter un apprenant</button>
+    </div>
+    <div>
+    <!-- Modal 2 with validation-->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-danger">enregistrer un apprenant</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form  ngForm #addForm (ngSubmit)="formSubmit(addForm)">
+              <div class="mb-2">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" id="name" class="form-control" name="nom" ngModel required>
+
+              </div>
+              <div class="mb-2">
+                <label for="prenom" class="form-label">Prenom</label>
+                <input type="text" id="name" class="form-control" name="prenom" ngModel required>
+
+              </div>
+              <div class="mb-2">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="name" class="form-control" name="email" ngModel required>
+
+              </div>
+              <div class="mb-2">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" id="age" class="form-control" name="first-angular-form" ngModel required>
+
+              </div>
+              <div class="mb-2">
+                <label for="phone" class="form-label">Téléphone</label>
+                <input type="int" id="phone" class="form-control" name="phone" ngModel required>
+
+              </div>
+              <div class="mb-2">
+                <label for="login" class="form-label">Login</label>
+                <input type="text" id="login" class="form-control" name="login" ngModel required>
+
+              </div>
+              <div class="mb-2">
+                <select id="genre" class="form-control" name="genre" ngModel>
+                  <option value="homme">Homme</option>
+                  <option value="femme">Femme</option>
+                </select>
+              </div>
+              <div class="mb-2">
+                <select id="status" class="form-control" name="status" ngModel>
+                  <option value="activer">Activer</option>
+                  <option value="desactiver">Désactiver</option>
+                </select>
+
+              </div>
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                <input type="password" id="exampleInputPassword1" class="form-control" name="passd" ngModel required>
+
+              </div>
+              <button class="btn btn-primary" type="submit" [disabled]="addForm.invalid">Enregistrer</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="main-content">
+      <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let user of listUsers">
+        <span class="nomuser">{{ user.nom }}</span><a class="action-link" [routerLink]="['/users/edituser', user.id]">Modifier</a> | <a class="action-link" [routerLink]="['/users/deleteuser', user.id]">Supprimer</a>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-tab>
+</mat-tab-group>
