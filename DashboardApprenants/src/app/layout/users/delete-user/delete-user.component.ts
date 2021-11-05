@@ -33,7 +33,7 @@ export class DeleteUserComponent implements OnInit {
         //console.log(this.utiliDetails);
         //form builder
         this.editUserForm = this.formBuilder.group({
-          'nomm': new FormControl(this.utiliDetails.nom),
+          'nom': new FormControl(this.utiliDetails.nom),
           'prenom': new FormControl(this.utiliDetails.prenom),
           'age': new FormControl(this.utiliDetails.age),
           'telephone': new FormControl(this.utiliDetails.telephone),
@@ -51,8 +51,7 @@ export class DeleteUserComponent implements OnInit {
     }
   }
   modifieutili(){
-    this.servi.modifieutili(JSON.parse(this.userId), JSON.parse(this.editUserForm.value)).subscribe(data => {
-    });
+    this.servi.modifieutili(this.userId, this.editUserForm.value).subscribe();
     // console.log(JSON.stringify(JSON.parse(this.editUserForm.value)));
     //console.log(this.userId);
   }

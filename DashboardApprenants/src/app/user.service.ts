@@ -25,7 +25,7 @@ export class UserService {
     // const id = userData.id;
    // console.log(userData[0]);
    console.log(userObj);
-    return this.http.put(this.apiUrl + '/user/update/'+id, userObj);
+    return this.http.put(this.apiUrl + '/user/update/'+id,userObj);
   }
   suppUser(id: any){
     return this.http.delete(this.apiUrl+'/user/delete/'+id);
