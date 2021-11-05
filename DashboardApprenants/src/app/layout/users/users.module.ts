@@ -12,6 +12,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
 import { ListformaComponent } from './listforma/listforma.component';
+import { PresentappComponent } from './presentapp/presentapp.component';
 
 
 
@@ -23,7 +24,8 @@ import { ListformaComponent } from './listforma/listforma.component';
     DeleteUserComponent,
     ListeUserComponent,
     ViewUserComponent,
-    ListformaComponent
+    ListformaComponent,
+    PresentappComponent
   ],
   imports: [
     CommonModule,

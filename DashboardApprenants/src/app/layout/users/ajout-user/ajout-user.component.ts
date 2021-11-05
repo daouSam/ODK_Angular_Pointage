@@ -2,7 +2,7 @@ import { UserService } from 'src/app/user.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators, FormControl, FormsModule } from '@angular/forms';
 import { User } from 'src/app/user.model';
-import { ActivatedRoute, Router, Routes } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 //import { MatSnackBar } from '@angular/material/snack-bar';
 
 

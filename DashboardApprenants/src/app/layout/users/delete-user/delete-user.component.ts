@@ -19,6 +19,7 @@ export class DeleteUserComponent implements OnInit {
     private servi: UserService,
     private formBuilder: FormBuilder) { }
 
+
   ngOnInit(): void {
     this.Loadeddata= false;
     this.activatedRoute.params.subscribe(data => {
@@ -29,7 +30,7 @@ export class DeleteUserComponent implements OnInit {
       this.servi.voirutili(this.userId).toPromise().then(data => {
         this.utiliDetails = data;
         //Object.assign(this.utiliDetails, data);
-        console.log(this.utiliDetails);
+        //console.log(this.utiliDetails);
         //form builder
         this.editUserForm = this.formBuilder.group({
           'nomm': new FormControl(this.utiliDetails.nom),
@@ -39,7 +40,7 @@ export class DeleteUserComponent implements OnInit {
           'email': new FormControl(this.utiliDetails.email),
           'login': new FormControl(this.utiliDetails.login),
           'password': new FormControl(this.utiliDetails.password),
-          'genree': new FormControl(this.utiliDetails.genre),
+          // 'genree': new FormControl(this.utiliDetails.genre),
           'userStatus': new FormControl(this.utiliDetails.userStatus),
           'profil':new FormControl(this.utiliDetails.profil)
         })
@@ -50,7 +51,10 @@ export class DeleteUserComponent implements OnInit {
     }
   }
   modifieutili(){
-    console.log(this.utiliDetails);
+    this.servi.modifieutili(JSON.parse(this.userId), JSON.parse(this.editUserForm.value)).subscribe(data => {
+    });
+    // console.log(JSON.stringify(JSON.parse(this.editUserForm.value)));
+    //console.log(this.userId);
   }
 
 }

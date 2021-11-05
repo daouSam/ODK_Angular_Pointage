@@ -20,8 +20,12 @@ export class UserService {
   voirutili(id: string){
     return this.http.get(this.apiUrl + '/user/get/' +id);
   }
-  modifieutili(id: string){
-    return this.http.get(this.apiUrl + '/user/update/' +id);
+  modifieutili(id: any, userObj: any){
+    //const userData = JSON.stringify(userObj);
+    // const id = userData.id;
+   // console.log(userData[0]);
+   console.log(userObj);
+    return this.http.put(this.apiUrl + '/user/update/'+id, userObj);
   }
   suppUser(id: any){
     return this.http.delete(this.apiUrl+'/user/delete/'+id);

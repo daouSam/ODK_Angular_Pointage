@@ -8,5 +8,5 @@ export class User {
 	'password': string
 	'genre': string
 	'userStatus': any
-  'profil':any;
+  'profil':any
 }
