@@ -1,1 +1,60 @@
-<p>delete-user works!</p>
+<div *ngIf="Loadeddata">
+  <form [formGroup]="editUserForm" (submit)="modifieutili()">
+    <div class="mb-2">
+      <label for="nom" class="form-label">Nom</label>
+      <input type="text" id="nom" class="form-control"   formControlName="nomm" required >
+
+    </div>
+    <div class="mb-2">
+      <label for="prenom" class="form-label">Prenom</label>
+      <input type="text" id="prenom" class="form-control"   formControlName="prenom"  required >
+
+    </div>
+    <div class="mb-2">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" id="email" class="form-control"   formControlName="email" required >
+
+    </div>
+    <div class="mb-2">
+      <label for="age" class="form-label">Age</label>
+      <input type="number" id="age" class="form-control"   formControlName="age" required >
+
+    </div>
+    <div class="mb-2">
+      <label for="phone" class="form-label">Téléphone</label>
+      <input type="int" id="phone" class="form-control"   formControlName="telephone" required >
+
+    </div>
+    <div class="mb-2">
+      <label for="login" class="form-label">Login</label>
+      <input type="text" id="login" class="form-control"   formControlName="login" required >
+
+    </div>
+    <div class="mb-2">
+      <select id="genre" class="form-control"   formControlName="genree" >
+        <option value="homme">Homme</option>
+        <option value="femme">Femme</option>
+      </select>
+    </div>
+    <div class="mb-2">
+      <select id="userStatus" class="form-control"   formControlName="userStatus" >
+        <option value="Activer">Activer</option>
+        <option value="Desactiver">Désactiver</option>
+      </select>
+
+    </div>
+    <div class="mb-2">
+      <select id="profil" class="form-control"   formControlName="profil" >
+        <option value="Apprenant">Apprenant</option>
+        <option value="Formateur">Formateur</option>
+      </select>
+
+    </div>
+    <div class="mb-2">
+      <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+      <input type="password" id="exampleInputPassword1" class="form-control"  formControlName="password" required >
+
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="editUserForm.invalid">Enregistrer</button>
+  </form>
+</div>

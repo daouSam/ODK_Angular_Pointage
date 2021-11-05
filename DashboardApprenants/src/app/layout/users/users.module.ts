@@ -8,7 +8,7 @@ import { ViewUserComponent } from './view-user/view-user.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatListModule} from '@angular/material/list';
 import { RouterModule } from '@angular/router';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
 import { ListformaComponent } from './listforma/listforma.component';
@@ -32,6 +32,7 @@ import { ListformaComponent } from './listforma/listforma.component';
     MatListModule,
     MatSnackBarModule,
     MatMenuModule,
+    ReactiveFormsModule,
     FormsModule
 
   ]

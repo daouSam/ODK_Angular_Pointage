@@ -23,7 +23,6 @@ export class AjoutUserComponent implements OnInit {
 
   constructor(
     private servi: UserService,
-    private formbuilder: FormsModule,
     private router: Router) {
 
 
@@ -59,7 +58,7 @@ export class AjoutUserComponent implements OnInit {
     this.utilisateur.profil= addForm.value.profile;
     console.log(this.utilisateur);
     this.servi.ajout(this.utilisateur).subscribe(data =>{
-        console.log(this.utilisateur);
+        //console.log(this.utilisateur);
     });
     addForm.reset();
   }

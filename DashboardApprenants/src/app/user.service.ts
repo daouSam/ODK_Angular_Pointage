@@ -17,8 +17,11 @@ export class UserService {
     return this.http.post(this.apiUrl+'/user/save', kelly);
     //console.log(kelly);
   }
-  modifierUser(){
-    return this.http.get(this.apiUrl+'/save');
+  voirutili(id: string){
+    return this.http.get(this.apiUrl + '/user/get/' +id);
+  }
+  modifieutili(id: string){
+    return this.http.get(this.apiUrl + '/user/update/' +id);
   }
   suppUser(id: any){
     return this.http.delete(this.apiUrl+'/user/delete/'+id);

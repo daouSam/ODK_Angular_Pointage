@@ -83,7 +83,7 @@
     <div class="main-content">
       <mat-list role="list">
         <mat-list-item role="listitem" *ngFor="let user of listUsers">
-        <span class="nomuser">{{ user.nom }}</span><span class="nomuser"> {{ user.prenom }}</span><span class="nomuser"> {{ user.profil }}</span><span class="nomuser"> {{ user.telephone }}</span><span class="nomuser"> {{ user.email }}</span><a class="action-link" [routerLink]="['/users/edituser', user.id]">Modifier</a> | <a class="action-link" [routerLink]="['/users/edituser', user.id]">Supprimer</a>
+        <span class="nomuser">{{ user.nom }}</span><span class="nomuser"> {{ user.prenom }}</span><span class="nomuser"> {{ user.profil }}</span><span class="nomuser"> {{ user.telephone }}</span><span class="nomuser"> {{ user.email }}</span><a class="action-link" [routerLink]="['/users/deleteuser', user.id]">Modifier</a> | <a class="action-link" [routerLink]="['/users/edituser', user.id]">Supprimer</a>
         </mat-list-item>
       </mat-list>
     </div>
