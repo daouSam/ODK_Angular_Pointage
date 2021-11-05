@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
+import { ListformaComponent } from './listforma/listforma.component';
 
 
 
@@ -21,7 +22,8 @@ import {MatMenuModule} from '@angular/material/menu';
     EditUserComponent,
     DeleteUserComponent,
     ListeUserComponent,
-    ViewUserComponent
+    ViewUserComponent,
+    ListformaComponent
   ],
   imports: [
     CommonModule,

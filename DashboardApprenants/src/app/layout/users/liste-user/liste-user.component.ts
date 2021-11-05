@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { UserService } from 'src/app/user.service';
 
 @Component({
@@ -9,6 +10,10 @@ import { UserService } from 'src/app/user.service';
 export class ListeUserComponent implements OnInit {
   listUsers: any;
 
+  lisuta: any;
+
+  apnnt ="Apprenant";
+
   constructor(private servi: UserService) { }
 
   ngOnInit(): void {
@@ -16,7 +21,8 @@ export class ListeUserComponent implements OnInit {
       this.listUsers = data;
     });
 
+    this.servi.listapprenant(this.apnnt).subscribe(datautt => {
+      this.lisuta = datautt;
+    });
   }
-
-
 }

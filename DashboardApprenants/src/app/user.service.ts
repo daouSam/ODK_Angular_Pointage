@@ -14,7 +14,7 @@ export class UserService {
     return this.http.get(this.apiUrl+'/users/all');
   }
   ajout(kelly: any){
-    return this.http.post(this.apiUrl+'/users/save', kelly);
+    return this.http.post(this.apiUrl+'/user/save', kelly);
     //console.log(kelly);
   }
   modifierUser(){
@@ -26,4 +26,8 @@ export class UserService {
   listformateur(profil: any){
     return this.http.get(this.apiUrl+'/users/'+profil);
   }
+  listapprenant(profill: any){
+    return this.http.get(this.apiUrl+'/users/'+profill);
+  }
+
 }

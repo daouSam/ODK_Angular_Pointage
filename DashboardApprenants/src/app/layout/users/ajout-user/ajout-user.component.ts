@@ -19,13 +19,11 @@ export class AjoutUserComponent implements OnInit {
   public utilisateur: User = new User;
   listUsers: any;
   //addForm: any;
-  userId: string = '';
   lisut: any;
 
   constructor(
     private servi: UserService,
     private formbuilder: FormsModule,
-    private activatedRoute: ActivatedRoute,
     private router: Router) {
 
 
@@ -39,17 +37,7 @@ export class AjoutUserComponent implements OnInit {
       //console.log(data);
     });
 
-    this.activatedRoute.params.subscribe(data => {
-      this.userId = data.id;
-    });
-    if(this.userId){
-      this.servi.suppUser(this.userId).subscribe(data => {
-        //console.log("success success !");
-        this.router.navigateByUrl('users/ajout');
-      },error => {
-        //console.log("erreur erreur");
-      })
-    }
+
   }
   utililiste(ut: NgForm){
     this.servi.listformateur(ut.value.perso).subscribe(dataut => {
@@ -71,9 +59,7 @@ export class AjoutUserComponent implements OnInit {
     this.utilisateur.profil= addForm.value.profile;
     console.log(this.utilisateur);
     this.servi.ajout(this.utilisateur).subscribe(data =>{
-     // this._snackBar.open("enregistrement effectuer avec succès");
-    },error => {
-      //this._snackBar.open("echec lors de l'enregistrement");
+        console.log(this.utilisateur);
     });
     addForm.reset();
   }

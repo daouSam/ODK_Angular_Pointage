@@ -4,6 +4,7 @@ import { AjoutUserComponent } from './layout/users/ajout-user/ajout-user.compone
 import { DeleteUserComponent } from './layout/users/delete-user/delete-user.component';
 import { EditUserComponent } from './layout/users/edit-user/edit-user.component';
 import { ListeUserComponent } from './layout/users/liste-user/liste-user.component';
+import { ListformaComponent } from './layout/users/listforma/listforma.component';
 import { ViewUserComponent } from './layout/users/view-user/view-user.component';
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
       {path:'listuser', component: ListeUserComponent},
       {path:'edituser/:id', component: EditUserComponent},
       {path:'deleteuser/:id', component: DeleteUserComponent},
-      {path:'viewuser/:id', component: ViewUserComponent}
+      {path:'viewuser/:id', component: ViewUserComponent},
+      {path:'listforma', component: ListformaComponent}
     ]
   }
 
