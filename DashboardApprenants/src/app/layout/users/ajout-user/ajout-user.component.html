@@ -44,13 +44,15 @@
                 <input type="text" id="login" class="form-control" ngModel name="login" required #login="ngModel">
 
               </div>
-              <div class="mb-2">
+              <!-- <div class="mb-2">
+                <label class="form-label">Genre</label>
                 <select id="genre" class="form-control" ngModel name="genre" #genre="ngModel">
                   <option value="homme">Homme</option>
                   <option value="femme">Femme</option>
                 </select>
-              </div>
+              </div> -->
               <div class="mb-2">
+                <label class="form-label">Status</label>
                 <select id="status" class="form-control" ngModel name="status" #status="ngModel">
                   <option value="Activer">Activer</option>
                   <option value="Desactiver">Désactiver</option>
@@ -58,6 +60,7 @@
 
               </div>
               <div class="mb-2">
+                <label class="form-label">Profile</label>
                 <select id="profil" class="form-control" ngModel name="profile" #profile="ngModel">
                   <option value="Apprenant">Apprenant</option>
                   <option value="Formateur">Formateur</option>

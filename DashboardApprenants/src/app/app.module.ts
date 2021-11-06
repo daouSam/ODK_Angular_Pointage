@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { UsersModule } from './layout/users/users.module';
+import { PresentappModule } from './layout/users/presentapp/presentapp.module';
 import {MatListModule} from '@angular/material/list';
 
 
@@ -22,6 +23,7 @@ import {MatListModule} from '@angular/material/list';
     ReactiveFormsModule,
     LayoutModule,
     UsersModule,
+    PresentappModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     HttpClientModule,

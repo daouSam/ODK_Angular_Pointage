@@ -53,7 +53,7 @@ export class AjoutUserComponent implements OnInit {
     this.utilisateur.email= addForm.value.email;
     this.utilisateur.login= addForm.value.login;
     this.utilisateur.password= addForm.value.passd;
-    this.utilisateur.genre= addForm.value.genre;
+    // this.utilisateur.genre= addForm.value.genre;
     this.utilisateur.userStatus= addForm.value.status;
     this.utilisateur.profil= addForm.value.profile;
     console.log(this.utilisateur);

@@ -12,7 +12,8 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
 import { ListformaComponent } from './listforma/listforma.component';
-import { PresentappComponent } from './presentapp/presentapp.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -24,8 +25,7 @@ import { PresentappComponent } from './presentapp/presentapp.component';
     DeleteUserComponent,
     ListeUserComponent,
     ViewUserComponent,
-    ListformaComponent,
-    PresentappComponent
+    ListformaComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +34,8 @@ import { PresentappComponent } from './presentapp/presentapp.component';
     MatListModule,
     MatSnackBarModule,
     MatMenuModule,
+    MatCardModule,
+    MatButtonModule,
     ReactiveFormsModule,
     FormsModule
 

@@ -1,4 +1,15 @@
 .sidena{
   //position: fixed;
   text-decoration: none;
+  padding-top: 35%;
+}
+a{
+  text-decoration: none;
+}
+.sidema {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: darkblue !important;
+  -webkit-overflow-scrolling: touch;
 }
