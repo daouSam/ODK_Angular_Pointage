@@ -21,10 +21,6 @@ export class UserService {
     return this.http.get(this.apiUrl + '/user/get/' +id);
   }
   modifieutili(id: any, userObj: any){
-    //const userData = JSON.stringify(userObj);
-    // const id = userData.id;
-   // console.log(userData[0]);
-   console.log(userObj);
     return this.http.put(this.apiUrl + '/user/update/'+id,userObj);
   }
   suppUser(id: any){
@@ -35,6 +31,11 @@ export class UserService {
   }
   listapprenant(profill: any){
     return this.http.get(this.apiUrl+'/users/'+profill);
+  }
+  ajoutpresent(press: any){
+    this.http.post(this.apiUrl+'/presence/add', press).subscribe(data =>{
+      console.log('success ........!');
+    });
   }
 
 }

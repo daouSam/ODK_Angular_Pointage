@@ -1,7 +1,7 @@
 <mat-tab-group>
 
   <mat-tab label="Gérer apprenant">
-    <h2>Ies {{listUsers.length}} utilisateurs de la première promotion<span class="orange">Orange</span><span class="digit">Digitale</span><span class="kalan">Kalanso</span></h2>
+    <h2 class="utp">Ies {{listUsers.length}} utilisateurs de la première promotion<span class="orange">Orange</span><span class="digit">Digitale</span><span class="kalan">Kalanso</span></h2>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-backdrop="static" data-keyboard=false>Ajouter un apprenant</button>
     <!-- Modal 2 with validation-->
     <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
@@ -83,10 +83,10 @@
     </div>
 
 
-    <div class="main-content">
+    <div class="main-content litut">
       <mat-list role="list">
         <mat-list-item role="listitem" *ngFor="let user of listUsers">
-        <span class="nomuser">{{ user.nom }}</span><span class="nomuser"> {{ user.prenom }}</span><span class="nomuser"> {{ user.profil }}</span><span class="nomuser"> {{ user.telephone }}</span><span class="nomuser"> {{ user.email }}</span><a class="action-link" [routerLink]="['/users/deleteuser', user.id]">Modifier</a> | <a class="action-link" [routerLink]="['/users/edituser', user.id]">Supprimer</a>
+        <span class="nomusee">{{ user.nom }}</span><span class="nomusee"> {{ user.prenom }}</span><span class="nomuse"> {{ user.profil }}</span><span class="nomuse"> {{ user.telephone }}</span><span class="nomuser"> {{ user.email }}</span><a class="action-link" [routerLink]="['/users/deleteuser', user.id]">Modifier</a> | <a class="action-link" [routerLink]="['/users/edituser', user.id]">Supprimer</a>
         </mat-list-item>
       </mat-list>
     </div>

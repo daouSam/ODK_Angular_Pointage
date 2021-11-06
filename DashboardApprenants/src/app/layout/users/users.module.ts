@@ -5,6 +5,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { ListeUserComponent } from './liste-user/liste-user.component';
 import { ViewUserComponent } from './view-user/view-user.component';
+import { PresentappComponent } from './presentapp/presentapp.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatListModule} from '@angular/material/list';
 import { RouterModule } from '@angular/router';
@@ -14,6 +15,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ListformaComponent } from './listforma/listforma.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -25,7 +27,8 @@ import {MatButtonModule} from '@angular/material/button';
     DeleteUserComponent,
     ListeUserComponent,
     ViewUserComponent,
-    ListformaComponent
+    ListformaComponent,
+    PresentappComponent
   ],
   imports: [
     CommonModule,
@@ -35,6 +38,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatSnackBarModule,
     MatMenuModule,
     MatCardModule,
+    MatTableModule,
     MatButtonModule,
     ReactiveFormsModule,
     FormsModule

@@ -5,7 +5,6 @@ import { DeleteUserComponent } from './layout/users/delete-user/delete-user.comp
 import { EditUserComponent } from './layout/users/edit-user/edit-user.component';
 import { ListeUserComponent } from './layout/users/liste-user/liste-user.component';
 import { ListformaComponent } from './layout/users/listforma/listforma.component';
-import { AujourdhuiComponent } from './layout/users/presentapp/aujourdhui/aujourdhui.component';
 import { PresentappComponent } from './layout/users/presentapp/presentapp.component';
 import { ViewUserComponent } from './layout/users/view-user/view-user.component';
 
@@ -19,11 +18,7 @@ const routes: Routes = [
       {path:'deleteuser/:id', component: DeleteUserComponent},
       {path:'viewuser/:id', component: ViewUserComponent},
       {path:'listforma', component: ListformaComponent},
-      {path:'listpresent', component: PresentappComponent},
-      {path:'listpresent', children: [
-          {path:'aujourdhui', component: AujourdhuiComponent}
-        ]
-      }
+      {path:'listpresent', component: PresentappComponent}
     ]
   }
 

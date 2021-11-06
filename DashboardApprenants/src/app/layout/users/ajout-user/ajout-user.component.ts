@@ -56,7 +56,7 @@ export class AjoutUserComponent implements OnInit {
     // this.utilisateur.genre= addForm.value.genre;
     this.utilisateur.userStatus= addForm.value.status;
     this.utilisateur.profil= addForm.value.profile;
-    console.log(this.utilisateur);
+    //console.log(this.utilisateur);
     this.servi.ajout(this.utilisateur).subscribe(data =>{
         //console.log(this.utilisateur);
     });
