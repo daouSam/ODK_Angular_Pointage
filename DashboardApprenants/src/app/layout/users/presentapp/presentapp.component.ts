@@ -1,3 +1,4 @@
+import { User } from './../../../user.model';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/user.service';
 import { FormBuilder, FormGroup, FormControl, NgForm } from '@angular/forms';
@@ -13,6 +14,7 @@ export class PresentappComponent implements OnInit {
   userd: any;
   usersam: any = '';
   present: FormGroup = new FormGroup({});
+  users_id = new User()
   displayedColumns: string[] = ['prenom', 'nom', 'telephone', 'email', 'selet'];
   don: any;
   userdd: any;
@@ -35,10 +37,10 @@ export class PresentappComponent implements OnInit {
     //ajoutpresent
     const dodo = this.servi.voirutili(ut).subscribe(data => {
       this.don = data;
-      this.userd = {"users_id": this.don.id};
+      this.userd = {"users": this.don};
       //this.userdd = {"users": this.userd};
-      console.log(JSON.stringify(this.userd));
-      this.servi.ajoutpresent(JSON.stringify(this.userd));
+      console.log(this.userd);
+      this.servi.ajoutpresent(this.userd);
     });
 
   }
