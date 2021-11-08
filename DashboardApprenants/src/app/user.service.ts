@@ -29,8 +29,8 @@ export class UserService {
   listformateur(profil: any){
     return this.http.get(this.apiUrl+'/users/'+profil);
   }
-  listapprenant(profill: any){
-    return this.http.get(this.apiUrl+'/users/'+profill);
+  listapprenant(profil: any){
+    return this.http.get(this.apiUrl+'/users/'+profil);
   }
   ajoutpresent(press: any){
     this.http.post(this.apiUrl+'/presence/add', press).subscribe(data =>{

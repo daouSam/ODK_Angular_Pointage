@@ -9,9 +9,6 @@ import { UserService } from 'src/app/user.service';
 export class ListformaComponent implements OnInit {
   perso ="Formateur";
   lisut: any;
-  // public userAddList = {
-  //   "users": user
-  // }
   constructor(private servi: UserService) { }
 
   ngOnInit(): void {

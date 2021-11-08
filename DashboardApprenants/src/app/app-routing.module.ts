@@ -1,3 +1,4 @@
+import { ListepresentComponent } from './layout/users/listepresent/listepresent.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AjoutUserComponent } from './layout/users/ajout-user/ajout-user.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
       {path:'deleteuser/:id', component: DeleteUserComponent},
       {path:'viewuser/:id', component: ViewUserComponent},
       {path:'listforma', component: ListformaComponent},
-      {path:'listpresent', component: PresentappComponent}
+      {path:'listpresent', component: PresentappComponent},
+      {path:'listpresence', component: ListepresentComponent}
     ]
   }
 

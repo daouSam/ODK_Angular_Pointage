@@ -39,7 +39,7 @@ export class PresentappComponent implements OnInit {
       this.don = data;
       this.userd = {"users": this.don};
       //this.userdd = {"users": this.userd};
-      console.log(this.userd);
+      //console.log(this.userd);
       this.servi.ajoutpresent(this.userd);
     });
 

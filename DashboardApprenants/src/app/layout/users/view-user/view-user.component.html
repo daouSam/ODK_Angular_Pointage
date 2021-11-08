@@ -1,1 +1,51 @@
-<p>view-user works!</p>
+<div class="main-content litut">
+  <mat-list role="list">
+    <mat-list-item role="listitem">
+      <h2>
+        <span class="nomusee"> {{ profile_user.prenom }} </span><span class="nomusee">{{ profile_user.nom }}</span>
+      </h2>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <h5>
+        <span class="nomuse">Profile :</span><span class="nomuse"> {{ profile_user.profil }}</span>
+      </h5>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <h5>
+        <span class="nomuse">Status :</span><span class="nomuse"> {{ profile_user.userStatus }}</span>
+      </h5>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <h5>
+        <span class="nomuse">Téléphone :</span><span class="nomuse"> {{ profile_user.telephone }}</span>
+      </h5>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <h5>
+        <span class="nomuser">Email :</span><span class="nomuser"> {{ profile_user.email }}</span>
+      </h5>
+    </mat-list-item>
+    <!-- <mat-list-item role="listitem">
+      <h5>
+        <span class="nomuse">Genre :</span><span class="nomusee"> {{ profile_user.genre }}</span>
+      </h5>
+    </mat-list-item> -->
+    <mat-list-item role="listitem">
+      <h5>
+        <span class="nomuse">Age :</span><span class="nomusee"> {{ profile_user.age }}</span>
+      </h5>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <h5>
+        <span class="nomuse">Date de création :</span><span class="nomusee">{{ profile_user.dateCreation }}</span>
+      </h5>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <h5>
+        <span class="nomuse">Date de Modification :</span><span class="nomusee">{{ profile_user.dateModification }}</span>
+      </h5>
+    </mat-list-item>
+  </mat-list>
+</div>
+
+
