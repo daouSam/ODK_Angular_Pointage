@@ -17,6 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import { ListepresentComponent } from './listepresent/listepresent.component';
+import { AccueilComponent } from './accueil/accueil.component';
 
 
 
@@ -30,7 +31,8 @@ import { ListepresentComponent } from './listepresent/listepresent.component';
     ViewUserComponent,
     ListformaComponent,
     PresentappComponent,
-    ListepresentComponent
+    ListepresentComponent,
+    AccueilComponent
   ],
   imports: [
     CommonModule,

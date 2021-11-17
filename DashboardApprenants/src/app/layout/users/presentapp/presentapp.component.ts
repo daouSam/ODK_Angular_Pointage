@@ -38,7 +38,6 @@ export class PresentappComponent implements OnInit {
     const dodo = this.servi.voirutili(ut).subscribe(data => {
       this.don = data;
       this.userd = {"users": this.don};
-      //this.userdd = {"users": this.userd};
       //console.log(this.userd);
       this.servi.ajoutpresent(this.userd);
     });
@@ -57,9 +56,3 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 ];
 
-export interface PeriodicElement {
-  prenom: string;
-  nom: string;
-  telephone: string;
-  email: string;
-}

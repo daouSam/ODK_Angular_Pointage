@@ -1,1 +1,13 @@
-<p>listepresent works!</p>
+<form #datalist="ngForm" (ngSubmit)="affichlisdate(datalist)">
+  <label>Date</label>
+  <input type="date" placeholder="YYYY-MM-DD" name="da" ngModel #da="ngModel">
+  <button type="submit">Afficher</button>
+</form>
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let lila of lista">
+  <span class="nomuser">{{ lila.id }}</span>
+    <span class="nomuser"> {{ lila.users.nom }}</span>
+    <span class="nomuser"> {{ lila.users.prenom }}</span>
+    <span class="nomuser"> {{ lila.heure_arrive }}</span>
+  </mat-list-item>
+</mat-list>

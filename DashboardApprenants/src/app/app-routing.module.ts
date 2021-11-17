@@ -8,10 +8,12 @@ import { ListeUserComponent } from './layout/users/liste-user/liste-user.compone
 import { ListformaComponent } from './layout/users/listforma/listforma.component';
 import { PresentappComponent } from './layout/users/presentapp/presentapp.component';
 import { ViewUserComponent } from './layout/users/view-user/view-user.component';
+import { AccueilComponent } from './layout/users/accueil/accueil.component';
 
 const routes: Routes = [
   {path:'users',
     children: [
+      {path:'', component: AccueilComponent},
       {path:'ajout/:id', component: AjoutUserComponent},
       {path:'ajout', component: AjoutUserComponent},
       {path:'listuser', component: ListeUserComponent},

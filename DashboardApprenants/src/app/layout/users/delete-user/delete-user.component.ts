@@ -52,8 +52,6 @@ export class DeleteUserComponent implements OnInit {
   }
   modifieutili(){
     this.servi.modifieutili(this.userId, this.editUserForm.value).subscribe();
-    // console.log(JSON.stringify(JSON.parse(this.editUserForm.value)));
-    //console.log(this.userId);
   }
 
 }

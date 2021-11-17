@@ -13,9 +13,9 @@ export class UserService {
   listUser(){
     return this.http.get(this.apiUrl+'/users/all');
   }
-  ajout(kelly: any){
-    return this.http.post(this.apiUrl+'/user/save', kelly);
-    //console.log(kelly);
+  ajout(data: any){
+    return this.http.post(this.apiUrl+'/user/save', data);
+    //console.log(data);
   }
   voirutili(id: string){
     return this.http.get(this.apiUrl + '/user/get/' +id);
@@ -36,6 +36,9 @@ export class UserService {
     this.http.post(this.apiUrl+'/presence/add', press).subscribe(data =>{
       console.log('success ........!');
     });
+  }
+  listeprsnt(data: any){
+    return this.http.get(this.apiUrl+'/presence/date='+data);
   }
 
 }
