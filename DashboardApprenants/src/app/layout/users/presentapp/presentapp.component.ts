@@ -42,7 +42,7 @@ export class PresentappComponent implements OnInit {
       //console.log(this.userd);
       if(this.userd != ''){
         this.servi.ajoutpresent(this.userd);
-        this.snackBar.open('apprenant ajouter à la liste de avec succès', 'ok', {
+        this.snackBar.open('apprenant ajouter à la liste de présence avec succès', 'ok', {
           duration: 2000
         });
       }

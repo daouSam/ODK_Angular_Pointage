@@ -1,9 +1,12 @@
-<mat-list role="list">
-  <mat-list-item role="listitem" *ngFor="let userp of lisut">
-    <span class="nomuser">{{ userp.nom }}</span>
-    <span class="nomuser"> {{ userp.prenom }}</span>
-    <span class="nomuser"> {{ userp.telephone }}</span>
-    <span class="nomuser"> {{ userp.profil }}</span>
-    <span class="nomuser"> {{ userp.email }}</span>
-  </mat-list-item>
-</mat-list>
+<div class="container">
+  <h2>La liste des formateurs de <span class="titre">Orange Digital Kalanso</span> au sein de Orange Digital Center</h2>
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let userp of lisut">
+      <span class="nomuser">{{ userp.nom }}</span>
+      <span class="nomuser"> {{ userp.prenom }}</span>
+      <span class="nomuser"> {{ userp.telephone }}</span>
+      <span class="nomuser"> {{ userp.profil }}</span>
+      <span class="nomuser"> {{ userp.email }}</span>
+    </mat-list-item>
+  </mat-list>
+</div>
