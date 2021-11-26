@@ -41,4 +41,9 @@ export class UserService {
     return this.http.get(this.apiUrl+'/presence/date='+data);
   }
 
+  listeprsntweek(data: any){
+    console.log(data);
+    return this.http.get(this.apiUrl+'/presence/week='+data);
+  }
+
 }

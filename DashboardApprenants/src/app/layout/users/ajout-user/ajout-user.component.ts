@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators, FormControl, FormsModule } from '@angular/forms';
 import { User } from 'src/app/user.model';
 import { ActivatedRoute, Router} from '@angular/router';
-//import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -23,7 +23,8 @@ export class AjoutUserComponent implements OnInit {
 
   constructor(
     private servi: UserService,
-    private router: Router) {
+    private router: Router,
+    private snackBar: MatSnackBar) {
 
 
   }
@@ -57,10 +58,16 @@ export class AjoutUserComponent implements OnInit {
     this.utilisateur.userStatus= addForm.value.status;
     this.utilisateur.profil= addForm.value.profile;
     //console.log(this.utilisateur);
-    this.servi.ajout(this.utilisateur).subscribe(data =>{
-        //console.log(this.utilisateur);
-    });
-    addForm.reset();
+    if(
+      this.servi.ajout(this.utilisateur).subscribe(data =>{
+          //console.log("utilisateur enregistrer avec succès");
+        })
+    ){
+      this.snackBar.open('utilisateur enregistrer avec succès', 'ok', {
+        duration: 4000
+      });
+      addForm.reset();
+    }
   }
 
 

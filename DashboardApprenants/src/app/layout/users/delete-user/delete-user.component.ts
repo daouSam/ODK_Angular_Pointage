@@ -1,7 +1,8 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/user.service';
 import { FormBuilder, FormGroup, FormControl, NgForm } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-delete-user',
@@ -17,7 +18,9 @@ export class DeleteUserComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private servi: UserService,
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder,
+    private snackBar: MatSnackBar,
+    private router: Router) { }
 
 
   ngOnInit(): void {
@@ -51,7 +54,13 @@ export class DeleteUserComponent implements OnInit {
     }
   }
   modifieutili(){
-    this.servi.modifieutili(this.userId, this.editUserForm.value).subscribe();
+      this.servi.modifieutili(this.userId, this.editUserForm.value).subscribe(d => {
+      });
+      this.snackBar.open('Utilisateur modifier avec succès', 'ok', {
+        duration: 4000
+      });
+     this.router.navigateByUrl('users/ajout');
+
   }
 
 }

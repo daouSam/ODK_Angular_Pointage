@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/user.service';
 
@@ -12,19 +13,26 @@ export class EditUserComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private servi: UserService,
-    private router: Router) { }
+    private router: Router,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data => {
       this.userId = data.id;
     });
     if(this.userId){
-      this.servi.suppUser(this.userId).subscribe(data => {
-        //console.log("success success !");
-        this.router.navigateByUrl('users/ajout');
-      },error => {
-        //console.log("erreur erreur");
-      })
+      if(
+        this.servi.suppUser(this.userId).subscribe(data => {
+          //console.log("success success !");
+        },error => {
+          //console.log("erreur erreur");
+        })
+        ){
+          this.snackBar.open('suppression effectuer avec succès', 'ok', {
+            duration: 4000
+          });
+          //this.router.navigateByUrl('users/ajout');
+      }
     }
   }
 

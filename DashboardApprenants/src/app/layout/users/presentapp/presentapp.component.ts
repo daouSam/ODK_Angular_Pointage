@@ -2,6 +2,7 @@ import { User } from './../../../user.model';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/user.service';
 import { FormBuilder, FormGroup, FormControl, NgForm } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-presentapp',
@@ -20,7 +21,7 @@ export class PresentappComponent implements OnInit {
   userdd: any;
 
 
-  constructor(private servi: UserService) { }
+  constructor(private servi: UserService,private snackBar: MatSnackBar,) { }
 
   ngOnInit(): void {
     this.servi.listapprenant(this.apnnt).subscribe(datautt => {
@@ -39,7 +40,12 @@ export class PresentappComponent implements OnInit {
       this.don = data;
       this.userd = {"users": this.don};
       //console.log(this.userd);
-      this.servi.ajoutpresent(this.userd);
+      if(this.userd != ''){
+        this.servi.ajoutpresent(this.userd);
+        this.snackBar.open('apprenant ajouter à la liste de avec succès', 'ok', {
+          duration: 2000
+        });
+      }
     });
 
   }

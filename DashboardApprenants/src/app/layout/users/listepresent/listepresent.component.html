@@ -1,13 +1,40 @@
-<form #datalist="ngForm" (ngSubmit)="affichlisdate(datalist)">
-  <label>Date</label>
-  <input type="date" placeholder="YYYY-MM-DD" name="da" ngModel #da="ngModel">
-  <button type="submit">Afficher</button>
-</form>
-<mat-list role="list">
-  <mat-list-item role="listitem" *ngFor="let lila of lista">
-  <span class="nomuser">{{ lila.id }}</span>
-    <span class="nomuser"> {{ lila.users.nom }}</span>
-    <span class="nomuser"> {{ lila.users.prenom }}</span>
-    <span class="nomuser"> {{ lila.heure_arrive }}</span>
-  </mat-list-item>
-</mat-list>
+<!--- mat premier ---->
+<mat-tab-group>
+  <mat-tab label="Liste de présence par jour">
+    <form #datalist="ngForm" (ngSubmit)="affichlisdate(datalist)">
+      <label>Date</label>
+      <input type="date" placeholder="YYYY-MM-DD" name="da" ngModel #da="ngModel">
+      <button type="submit">Afficher</button>
+    </form>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let lila of lista">
+      <span class="nomuser">{{ lila.id }}</span>
+        <span class="nomuser"> {{ lila.users.nom }}</span>
+        <span class="nomuser"> {{ lila.users.prenom }}</span>
+        <span class="nomuser"> {{ lila.heure_arrive }}</span>
+      </mat-list-item>
+    </mat-list>
+  </mat-tab>
+  <!-- second section -->
+  <mat-tab label="Liste de présence par sémaine">
+    <form #datalists="ngForm" (ngSubmit)="affichlistsmne(datalists)">
+      <label>Date</label>
+      <input type="date" placeholder="YYYY-MM-DD" name="daweek" ngModel #da="ngModel">
+      <button type="submit">Afficher</button>
+    </form>
+    <!-- <ul ng-repeat="(key, value) in listaweek | groupBy: 'date'">
+      Group name: {{ listaweek.date }}
+      <li ng-repeat="listaweek in value">
+        Nom: {{ listaweek.users.nom }}
+      </li>
+    </ul> -->
+  </mat-tab>
+  <!-- troisième section -->
+  <mat-tab label="Liste de présence par mois">
+    <p>mois présence</p>
+  </mat-tab>
+  <!-- quatrième section -->
+  <mat-tab label="Liste de présence par intervale">
+    <p>intervale présence</p>
+  </mat-tab>
+</mat-tab-group>
